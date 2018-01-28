@@ -19,6 +19,16 @@ public class Launcher {
 		Collections.sort(s, String::compareTo);
 		
 		System.out.println(s);
+		
+		Runnable r = () -> System.out.println("hello");
+		
+		process(() -> System.out.println("hello 2")); 
+		
+		
+	}
+	
+	public static void process(Runnable r) {
+		r.run();
 	}
 
 }
